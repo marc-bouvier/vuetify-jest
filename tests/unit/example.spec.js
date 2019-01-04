@@ -1,12 +1,17 @@
-import { shallowMount } from '@vue/test-utils'
+import {createLocalVue, shallowMount } from '@vue/test-utils'
 import HelloWorld from '@/components/HelloWorld.vue'
+import Vuetify from 'vuetify'
 
 describe('HelloWorld.vue', () => {
-  it('renders props.msg when passed', () => {
-    const msg = 'new message'
+  it('matches snapshot', () => {
+      const msg = 'message'
+    const localVue = createLocalVue()
+    localVue.use(Vuetify)
+
     const wrapper = shallowMount(HelloWorld, {
+      localVue:localVue,
       propsData: { msg }
     })
-    expect(wrapper.text()).toMatch(msg)
+    expect(wrapper.html()).toMatchSnapshot()
   })
 })

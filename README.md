@@ -39,3 +39,13 @@ The test runs fine but there is a message I cannot get rid of :
 
     If you're seeing "$attrs is readonly", it's caused by this
 ```
+
+## Created from Vue-cli 3.0.5
+
+* @vue/cli-service 3.2.3
+* @vue/cli-plugin-babel 3.2.2
+* @vue/cli-plugin-eslint 3.2.2
+* @vue/cli-plugin-unit-jest 3.2.3
+* vue-cli-plugin-editorconfig 0.2.1
+* vue-cli-plugin-i18n 0.5.1
+* vue-cli-plugin-vuetify 0.4.6
